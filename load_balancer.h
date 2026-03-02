@@ -17,6 +17,9 @@ private:
     int serversAdded;
     int serversDeleted;
     int totalRequestsProcessed;
+    int addressesBlocked;
+    int taskTimeMin;
+    int taskTimeMax;
     queue<Request> requestQueue;
     vector<Webserver> webservers;
 
@@ -57,6 +60,12 @@ public:
 
     void setTotalRequestsProcessed(int count);
     int getTotalRequestsProcessed();
+
+    void setAddressesBlocked(int num);
+    int getAddressesBlocked();
+
+    int getTaskTimeMin();
+    int getTaskTimeMax();
     
     /** @return Number of requests currently in the queue. */
     int getQueueSize();

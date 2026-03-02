@@ -70,11 +70,16 @@ int main() {
     cout << "---------------------------------------" << endl;
     cout << "          Load Balancer Report         " << endl;
     cout << "---------------------------------------" << endl;
+    cout << "Total Servers Started: " << numServers << endl;
+    cout << "Starting Requests in Queue: " << initialRequests << endl;
     cout << "Total Servers Currently: " << lb.getServerCount() << endl;
     cout << "Total Requests Processed: " << lb.getTotalRequestsProcessed() << endl;
     cout << "Total Requests In Queue: " << lb.getQueueSize() << endl;
     cout << "Servers Added During Runtime: " << lb.getServersAdded() - numServers << endl;
     cout << "Servers Deleted During Runtime: "<< lb.getServersDeleted() << endl;
+    cout << "Total Blocked IP Addresses: " << lb.getAddressesBlocked() << endl;
+    cout << "Task Time Minimum: "<< lb.getTaskTimeMin() << endl;
+    cout << "Task Time Maximum: " << lb.getTaskTimeMax() << endl;
 
     return 0;
 }

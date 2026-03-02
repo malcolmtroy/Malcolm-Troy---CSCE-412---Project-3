@@ -19,6 +19,9 @@ LoadBalancer::LoadBalancer() {
     serversAdded = 0;
     serversDeleted = 0;
     totalRequestsProcessed = 0;
+    addressesBlocked = 0;
+    taskTimeMin = 101;
+    taskTimeMax = 0;
 }
 
 void LoadBalancer::enqueueRequest(Request reqL) {
@@ -46,8 +49,11 @@ void LoadBalancer::run(int clockTime, int startServerNum) {
             Request newReq;
             string ip = newReq.getIpIn();
 
-            if (ip.find("1.") == 0) {
-                cout << MAGENTA << "[Cycle " << clock << "] BLOCKED | IP: " << ip << RESET << endl;
+            int firstNum = stoi(ip.substr(0, ip.find('.')));
+
+            if (firstNum >= 25 && firstNum <= 50) {
+                cout << MAGENTA << "[Cycle " << clock << "] BLOCKED (Range 1-20) | IP: " << ip << RESET << endl;
+                addressesBlocked++;
             }
             else {
                 enqueueRequest(newReq);
@@ -62,6 +68,14 @@ void LoadBalancer::run(int clockTime, int startServerNum) {
 
                 Request req = requestQueue.front();
                 requestQueue.pop();
+
+                if (req.getTime() < taskTimeMin) {
+                    taskTimeMin = req.getTime();
+                }
+
+                if (req.getTime() > taskTimeMax) {
+                    taskTimeMax = req.getTime();
+                }
 
                 webservers[i].recieveRequest(req);
 
@@ -138,6 +152,22 @@ void LoadBalancer::setTotalRequestsProcessed(int count) {
 
 int LoadBalancer::getTotalRequestsProcessed() {
     return totalRequestsProcessed;
+}
+
+void LoadBalancer::setAddressesBlocked(int num) {
+    addressesBlocked = num;
+}
+
+int LoadBalancer::getAddressesBlocked() {
+    return addressesBlocked;
+}
+
+int LoadBalancer::getTaskTimeMin() {
+    return taskTimeMin;
+}
+
+int LoadBalancer::getTaskTimeMax() {
+    return taskTimeMax;
 }
 
 int LoadBalancer::getQueueSize() {
