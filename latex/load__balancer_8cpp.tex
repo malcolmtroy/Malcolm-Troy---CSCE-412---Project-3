@@ -1,0 +1,38 @@
+\doxysection{load\+\_\+balancer.\+cpp File Reference}
+\hypertarget{load__balancer_8cpp}{}\label{load__balancer_8cpp}\index{load\_balancer.cpp@{load\_balancer.cpp}}
+
+
+Implementation of the \doxylink{class_load_balancer}{Load\+Balancer} core logic.  
+
+
+{\ttfamily \+\#include "{}load\+\_\+balancer.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{load__balancer_8cpp_a6f699060902f800f12aaae150f3a708e}\label{load__balancer_8cpp_a6f699060902f800f12aaae150f3a708e} 
+\+\#define {\bfseries MAGENTA}~"{}\textbackslash{}033\+[35m"{}
+\item 
+\Hypertarget{load__balancer_8cpp_abf681265909adf3d3e8116c93c0ba179}\label{load__balancer_8cpp_abf681265909adf3d3e8116c93c0ba179} 
+\+\#define {\bfseries YELLOW}~"{}\textbackslash{}033\+[33m"{}
+\item 
+\Hypertarget{load__balancer_8cpp_ad243f93c16bc4c1d3e0a13b84421d760}\label{load__balancer_8cpp_ad243f93c16bc4c1d3e0a13b84421d760} 
+\+\#define {\bfseries CYAN}~"{}\textbackslash{}033\+[36m"{}
+\item 
+\Hypertarget{load__balancer_8cpp_acfbc006ea433ad708fdee3e82996e721}\label{load__balancer_8cpp_acfbc006ea433ad708fdee3e82996e721} 
+\+\#define {\bfseries GREEN}~"{}\textbackslash{}033\+[32m"{}
+\item 
+\Hypertarget{load__balancer_8cpp_a9489fe820b5e8eb3cbd187a2d0813004}\label{load__balancer_8cpp_a9489fe820b5e8eb3cbd187a2d0813004} 
+\+\#define {\bfseries BOLD\+\_\+\+WHITE}~"{}\textbackslash{}033\+[1;37m"{}
+\item 
+\Hypertarget{load__balancer_8cpp_a58f9401d546703859ab9c8720c61ee9e}\label{load__balancer_8cpp_a58f9401d546703859ab9c8720c61ee9e} 
+\+\#define {\bfseries BOLD\+\_\+\+RED}~"{}\textbackslash{}033\+[1;31m"{}
+\item 
+\Hypertarget{load__balancer_8cpp_ab702106cf3b3e96750b6845ded4e0299}\label{load__balancer_8cpp_ab702106cf3b3e96750b6845ded4e0299} 
+\+\#define {\bfseries RESET}~"{}\textbackslash{}033\+[0m"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{class_load_balancer}{Load\+Balancer} core logic. 
+
+Features a dynamic simulation loop with automated scaling based on queue density. 

@@ -1,3 +1,9 @@
+/**
+ * @file request.cpp
+ * @brief Implementation of the Request class.
+ * @details Contains logic for generating randomized IP addresses, job types, and task durations.
+ */
+
 #include "request.h"
 
 Request::Request() {

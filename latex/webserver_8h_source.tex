@@ -1,0 +1,36 @@
+\doxysection{webserver.\+h}
+\hypertarget{webserver_8h_source}{}\label{webserver_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WEBSERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WEBSERVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}request.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_webserver_ac2a6f51bcc54efaaf5f4773a7c24f009}{Webserver}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ available;}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{class_request}{Request}}\ req;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ processTimeRemaining;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_webserver_ac2a6f51bcc54efaaf5f4773a7c24f009}{Webserver}}();}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_webserver_a2f5a10e51c951525aea07fe3d3de1112}{recieveRequest}}(\doxymbox{\hyperlink{class_request}{Request}}\ reqW);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_webserver_ad8e5f2cc6853ac0177a5131d6132c165}{processRequest}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setAvailable(\textcolor{keywordtype}{bool}\ availableW);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ getAvailable();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setProcessTimeRemaining(\textcolor{keywordtype}{int}\ processTimeRemainingW);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ getProcessTimeRemaining();}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,3 +1,9 @@
+/**
+ * @file webserver.cpp
+ * @brief Implementation of the Webserver class.
+ * @details Logic for processing requests and managing server availability over clock cycles.
+ */
+
 #include "webserver.h"
 
 Webserver::Webserver() {

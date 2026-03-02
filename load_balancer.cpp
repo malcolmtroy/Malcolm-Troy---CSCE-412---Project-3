@@ -1,3 +1,9 @@
+/**
+ * @file load_balancer.cpp
+ * @brief Implementation of the LoadBalancer core logic.
+ * @details Features a dynamic simulation loop with automated scaling based on queue density.
+ */
+
 #include "load_balancer.h"
 
 #define MAGENTA "\033[35m"

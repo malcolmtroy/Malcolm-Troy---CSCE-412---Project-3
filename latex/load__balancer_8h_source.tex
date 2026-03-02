@@ -1,0 +1,50 @@
+\doxysection{load\+\_\+balancer.\+h}
+\hypertarget{load__balancer_8h_source}{}\label{load__balancer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOAD\_BALANCER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOAD\_BALANCER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}request.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}webserver.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_load_balancer_a6e6669a6a4f0c3df345a13246b17a84b}{LoadBalancer}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ runtimeRemaining;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ serversAdded;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ serversDeleted;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ totalRequestsProcessed;}
+\DoxyCodeLine{00020\ \ \ \ \ queue<Request>\ requestQueue;}
+\DoxyCodeLine{00021\ \ \ \ \ vector<Webserver>\ webservers;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{class_load_balancer_a6e6669a6a4f0c3df345a13246b17a84b}{LoadBalancer}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_load_balancer_ac1d87ae3b72a67f8ea903b76c69ae047}{enqueueRequest}}(\doxymbox{\hyperlink{class_request}{Request}}\ reqL);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_load_balancer_a343a520840c4b12ba4b218631e3136ff}{addServer}}(\doxymbox{\hyperlink{class_webserver}{Webserver}}\ webL);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_load_balancer_a29028b49a6559ee3a35742ce7a2a13aa}{run}}(\textcolor{keywordtype}{int}\ clockTime,\ \textcolor{keywordtype}{int}\ startServerNum);}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setRuntimeRemaining(\textcolor{keywordtype}{int}\ time);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ getRuntimeRemaining();}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ setServersAdded(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ getServersAdded();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ setServersDeleted(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ getServersDeleted();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setTotalRequestsProcessed(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ getTotalRequestsProcessed();}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}{getQueueSize}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_load_balancer_a8e73dc5d30ddba1a041dc005e42726a8}{getServerCount}}();}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
