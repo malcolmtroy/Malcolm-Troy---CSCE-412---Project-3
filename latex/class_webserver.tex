@@ -1,0 +1,63 @@
+\doxysection{Webserver Class Reference}
+\hypertarget{class_webserver}{}\label{class_webserver}\index{Webserver@{Webserver}}
+
+
+A worker class that processes \doxylink{class_request}{Request} objects.  
+
+
+
+
+{\ttfamily \+\#include $<$webserver.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_webserver_ac2a6f51bcc54efaaf5f4773a7c24f009}\label{class_webserver_ac2a6f51bcc54efaaf5f4773a7c24f009} 
+{\bfseries Webserver} ()
+\begin{DoxyCompactList}\small\item\em Initializes a webserver to an available state. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_webserver_a2f5a10e51c951525aea07fe3d3de1112}{recieve\+Request}} (\doxymbox{\hyperlink{class_request}{Request}} reqW)
+\begin{DoxyCompactList}\small\item\em Assigns a request to the server and sets the processing timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_webserver_ad8e5f2cc6853ac0177a5131d6132c165}\label{class_webserver_ad8e5f2cc6853ac0177a5131d6132c165} 
+void {\bfseries process\+Request} ()
+\begin{DoxyCompactList}\small\item\em Decrements the remaining time and marks the server available if finished. \end{DoxyCompactList}\item 
+\Hypertarget{class_webserver_adef55374d2b3b1f83a4411a0f93624f6}\label{class_webserver_adef55374d2b3b1f83a4411a0f93624f6} 
+void {\bfseries set\+Available} (bool availableW)
+\item 
+\Hypertarget{class_webserver_afab693ae15dcc3e85f55ea190e79a9bd}\label{class_webserver_afab693ae15dcc3e85f55ea190e79a9bd} 
+bool {\bfseries get\+Available} ()
+\item 
+\Hypertarget{class_webserver_a51f38a286fda8e7ee7fd93d749227a82}\label{class_webserver_a51f38a286fda8e7ee7fd93d749227a82} 
+void {\bfseries set\+Process\+Time\+Remaining} (int process\+Time\+RemainingW)
+\item 
+\Hypertarget{class_webserver_a292e9846c4985165a7bcc87792c4f242}\label{class_webserver_a292e9846c4985165a7bcc87792c4f242} 
+int {\bfseries get\+Process\+Time\+Remaining} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A worker class that processes \doxylink{class_request}{Request} objects. 
+
+\label{doc-func-members}
+\Hypertarget{class_webserver_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_webserver_a2f5a10e51c951525aea07fe3d3de1112}\index{Webserver@{Webserver}!recieveRequest@{recieveRequest}}
+\index{recieveRequest@{recieveRequest}!Webserver@{Webserver}}
+\doxysubsubsection{\texorpdfstring{recieveRequest()}{recieveRequest()}}
+{\footnotesize\ttfamily \label{class_webserver_a2f5a10e51c951525aea07fe3d3de1112} 
+void Webserver::\+recieve\+Request (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_request}{Request}}}]{reqW}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a request to the server and sets the processing timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqW} & The \doxylink{class_request}{Request} to be processed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+webserver.\+h\item 
+webserver.\+cpp\end{DoxyCompactItemize}
